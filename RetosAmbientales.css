@@ -144,6 +144,52 @@ section .titulo {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Contenedor principal del bloque */
+.bloque {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* separación entre texto e imagen */
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+/* Texto */
+.bloque .content {
+  flex: 1; /* ocupa todo el espacio disponible */
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Imagen */
+.bloque .imagen {
+  flex: 0 0 250px; /* ancho fijo aproximado para la imagen */
+}
+
+.bloque .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Responsivo: apila en móvil */
+@media (max-width: 768px) {
+  .bloque {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bloque .imagen {
+    width: 80%; /* ocupa menos espacio y se centra */
+    margin-top: 1.5rem;
+  }
+}
+
 
 /* ----- EFECTO DE SCROLL SUAVE ----- */
 html {
