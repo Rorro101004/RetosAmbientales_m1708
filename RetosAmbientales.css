@@ -1,61 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/* ----- ESTILOS GENERALES ----- */
 body {
-    background-image: url();
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+/* PORTADA */
 header {
     width: 100%;
+    height: 100vh; 
+    background-image: url('imgs/portada_tierra.jpg');
+    background-size: cover;   
+    background-position: center; 
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;       
     justify-content: center;   
-    background-image: url(imgs/blue-green-gradient-background-260nw-1653243289.webp);
-    /*background-color: gainsboro;*/
-    height: 100px;
     position: relative;        
 }
-
-.headerImg {
-    position: absolute;        
-    left: 20px;
-    height: 80px;             
-    width: auto;
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px; 
+    background: linear-gradient(to bottom, transparent, #ffffff); 
 }
 
 header h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    color: rgb(213, 229, 40);
+    font-size: 600%;
+    color: white;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin: 0;
+    text-shadow: 4px 1px 20px rgba(0,0,0,0.6); 
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0078d7;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+/* ----- PREGUNTAS COMO BLOQUES ----- */
+.preguntas {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.preguntas li a {
+  display: block;
+  padding: 1.2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.preguntas li a:hover {
+  background: #0078d7;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ----- SECCIONES DE RESPUESTAS ----- */
+section {
+  padding: 2rem;
+  background: white;
+  margin: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section .titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0078d7;
+}
+
+.respuestas li {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Contenedor de bloques */
+.temas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Estilo de cada bloque */
+.tema {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Imagen del bloque */
+.tema img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Título del bloque */
+.tema h3 {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+/* Efecto hover */
+.tema:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 
-main,
-section {
-    .part1 {
-        width: 15%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
-    }
-
-    .part2 {
-        width: 85%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
-    }
-
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: safe;
-    align-items: center;
-    border: 2px solid blue;
-    margin: 10px;
+/* ----- EFECTO DE SCROLL SUAVE ----- */
+html {
+  scroll-behavior: smooth;
 }
