@@ -4,7 +4,7 @@
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom, #97e399, #784b2a);;
   color: #333;
 }
 
@@ -44,7 +44,7 @@ header h1 {
 h2 {
   text-align: center;
   font-size: 2rem;
-  color: #0078d7;
+  color: #27dc6f;
   margin-top: 3rem;
   margin-bottom: 2rem;
   font-weight: bold;
@@ -57,21 +57,20 @@ h2 {
   gap: 1rem;
   margin: 2rem;
 }
-
 .preguntas li a {
   display: block;
   padding: 1.2rem 1.5rem;
   background: #ffffff;
   border-radius: 12px;
   text-decoration: none;
-  color: #1a1a1a;
+  color: #929292;
   font-weight: 500;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 
 .preguntas li a:hover {
-  background: #0078d7;
+  background: #55a7eb;
   color: white;
   transform: translateY(-4px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
@@ -90,7 +89,7 @@ section .titulo {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #0078d7;
+  color: #442005;
 }
 
 .respuestas li {
@@ -109,11 +108,12 @@ section .titulo {
 
 /* Estilo de cada bloque */
 .tema {
+  color: #929292;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  background: #ffffff;
+  background: #55a7eb;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -134,7 +134,7 @@ section .titulo {
 .tema h3 {
   margin: 1rem 0;
   font-size: 1.2rem;
-  color: #1a1a1a;
+  color: #ffffff;
   text-align: center;
 }
 
