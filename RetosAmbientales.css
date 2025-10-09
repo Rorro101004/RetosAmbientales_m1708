@@ -164,7 +164,12 @@ section .titulo {
   color: #333;
   text-align: justify;
 }
-
+/*Hipervinculo*/
+.enlace-titulo {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre el h3 y el enlace */
+}
 /* Imagen */
 .bloque .imagen {
   flex: 0 0 250px; /* ancho fijo aproximado para la imagen */
