@@ -194,8 +194,51 @@ section .titulo {
     margin-top: 1.5rem;
   }
 }
+.gifs {
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: orange;
+  width: 95%;   
+  margin: 2rem auto;   
+  border-radius: 12px; 
+  box-shadow: 0 4px 10px rgba(63, 61, 61, 0.1); 
+}
+.gif img{
+  width: 100%;      
+  height: 100%;    
+  border-radius: 12px;
+  border: solid #000000 2px;
+  align-items: center;
+}
+.mensaje-motivacional {
+  width: 95%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(90deg, #a6e08a 60%, #55a7eb 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    min-height: 220px;       /* Altura mínima para ver el efecto */
+}
+.mensaje-motivacional h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #225c1c;
+    letter-spacing: 1px;
+}
 
-
+.mensaje-motivacional p {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
 /* ----- EFECTO DE SCROLL SUAVE ----- */
 html {
   scroll-behavior: smooth;
